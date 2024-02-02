@@ -63,11 +63,11 @@ io.sockets.on("connection", function (socket) {
     console.log(socket.name + "님이 나가셨습니다.");
 
     /* 나가는 사람을 제외한 나머지 유저에게 메시지 전송 */
-    socket.broadcast.emit("update", {type: "disconnect", name: "SERVER", message: socket.name + "님이 나가셨습니다."});
+    socket.broadcast.emit("update", {type: "disconnect", name: "😢", message: socket.userName + "님이 나가셨습니다."});
   });
 });
 
 /* 서버를 8080 포트로 listen */
-server.listen(8080, "172.31.87.171", function () {
+server.listen(8080, "172-31-87-171", function () {
   console.log("서버 실행 중..");
 });
