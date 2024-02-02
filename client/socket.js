@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io("http://172.31.87.171:8080");
 
 const messageInput = document.getElementById("test");
 const chatForm = document.getElementById("chat-form");
