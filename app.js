@@ -68,6 +68,6 @@ io.sockets.on("connection", function (socket) {
 });
 
 /* 서버를 3000 포트로 listen */
-server.listen(3000, "0.0.0.0", function () {
+server.listen(3000, function () {
   console.log("서버가 실행 중입니당...");
 });
