@@ -17,6 +17,25 @@
   overflow-y: auto;
 }
 
+#test {
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+}
+/* 
+#icon {
+  display: inline-flex;
+  width: 25px;
+  height: 25px;
+  border-style: none;
+} */
+
+button {
+  border-style: none;
+  background: none;
+  font-size: 100px;
+}
 /* 접속 알림 */
 .connect {
   width: 95%;
@@ -25,15 +44,17 @@
   text-align: center;
   margin-top: 10px;
   border-radius: 5px;
+  padding: 5px;
 }
 
 /* 접속 종료 알림 */
 .disconnect {
   width: 95%;
   margin: auto;
-  background-color: indianred;
+  background-color: rgba(233, 114, 114, 0.722);
   text-align: center;
   margin-top: 10px;
+  padding: 5px;
 }
 
 /* 내가 보낸 메시지 */
@@ -44,6 +65,7 @@
   border-radius: 5px;
   margin-top: 10px;
   margin-right: 10px;
+  padding: 5px;
   float: right;
 }
 
@@ -55,5 +77,6 @@
   border-radius: 5px;
   margin-left: 10px;
   margin-top: 10px;
+  padding: 5px;
   float: left;
 }
