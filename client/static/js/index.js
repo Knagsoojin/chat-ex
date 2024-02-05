@@ -48,19 +48,21 @@ socket.on("update", function (data) {
 
 function send() {
   const messageInput = document.getElementById("test");
-  const message = messageInput.value;
+  const message = messageInput.value.trim();
 
   // 내가 전송할 메시지 클라이언트에게 표시
-  const chat = document.getElementById("chat");
-  const msg = document.createElement("div");
-  const node = document.createTextNode(`${message}`);
-  msg.classList.add("me");
-  msg.appendChild(node);
-  chat.appendChild(msg);
+  if (message !== "") {
+    const chat = document.getElementById("chat");
+    const msg = document.createElement("div");
+    const node = document.createTextNode(`${message}`);
+    msg.classList.add("me");
+    msg.appendChild(node);
+    chat.appendChild(msg);
 
-  // 서버로 message 이벤트 전달 + 데이터와 함께
-  socket.emit("message", {type: "message", name: name, message: message});
+    // 서버로 message 이벤트 전달 + 데이터와 함께
+    socket.emit("message", {type: "message", name: name, message: message});
 
-  // 메시지 입력창 초기화
-  messageInput.value = "";
+    // 메시지 입력창 초기화
+    messageInput.value = "";
+  }
 }
